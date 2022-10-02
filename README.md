@@ -2,11 +2,11 @@
 
 Generate the "perfect" keyboard layout using evolutionary computing!
 
-Implementation of [this video](https://www.youtube.com/watch?v=EOaPb9wrgDY) by adumb.
+Implementation of [this video](https://www.youtube.com/watch?v=EOaPb9wrgDY) by adumb.  
 Uses the EC Program structure created by my professor and advisor Dr. Taylor for his EC class at Missouri S&T.
 
 ## Usage
-Use pipenv to create the environment with the Pipfile. If you don't to, the only package you need is tqdm.  
+Use pipenv to create the environment with the Pipfile. If you don't want to, the only package you need is tqdm.  
 Download the archive.org dataset from [here](https://www.kaggle.com/datasets/Cornell-University/arxiv) and extract to `data/arxiv-metadata-oai-snapshot.json`
 
 If you are using pipenv:
