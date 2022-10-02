@@ -2,7 +2,7 @@
 
 Generate the "perfect" keyboard layout using evolutionary computing!
 
-Implementation of [this video](https://www.youtube.com/watch?v=EOaPb9wrgDY&t=339s) by adumb.
+Implementation of [this video](https://www.youtube.com/watch?v=EOaPb9wrgDY) by adumb.
 Uses the EC Program structure created by my professor and advisor Dr. Taylor for his EC class at Missouri S&T.
 
 ## Usage
