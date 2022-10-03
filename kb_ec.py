@@ -283,16 +283,12 @@ def evolve(objectives: list[str], pop_size: int, epochs: int) -> Population:
     Returns:        Population
     Modifies:       Various data structures
     """
-    print("Initializing population...")
     population = initialize_pop(objective=KEYBOARD_CHARS, pop_size=pop_size)
-    print("done.")
-
     population = evaluate_group(objectives=objectives, individuals=population)
-
     rank_group(individuals=population)
 
     for epoch in range(epochs):
-        print(f"Generating generation {epoch + 1}...")
+        print(f'Generation {epochs + 1}:')
         # Top 10% get copied to new generation
         survived = Population(
             [
@@ -305,7 +301,6 @@ def evolve(objectives: list[str], pop_size: int, epochs: int) -> Population:
             num_children=len(population) - len(survived),
         )  # Top 50% get to breed
         mut_new_gen = mutate_group(children=new_gen, mutate_rate=0.10)
-        print("done.")
 
         assert len(new_gen) == len(population), "Old gen and new gen sizes do not match"
 
@@ -313,7 +308,7 @@ def evolve(objectives: list[str], pop_size: int, epochs: int) -> Population:
 
         rank_group(individuals=mut_new_gen)
         print(
-            f"Epoch {epoch} with best individual (Fitness: {mut_new_gen[-1]['fitness']:.3f}):"
+            f"Generation {epoch} with best individual (Fitness: {mut_new_gen[-1]['fitness']:.3f}):"
         )
         print_keyboard(mut_new_gen[-1]["genome"])
         # print(population)  # Uncomment to make cool patterns!
